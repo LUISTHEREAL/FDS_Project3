@@ -1,0 +1,18 @@
+ void buildhep(vector<int>&data, int size, int start)
+ {
+     int small = first;
+     int leftChild = 2 * first + 1;
+     int rightChild = 2 * first + 2;
+
+     if (leftChild < size && data[leftChild] < data[small])
+         small = leftChild;
+
+     if (rightChild < size && data[rightChild] < data[small])
+         small = rightChild;
+
+     if (small != first)
+     {
+         swap(data[first], data[small]);
+         buildhep(data, size, small);
+     }
+ };
