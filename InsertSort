@@ -1,4 +1,16 @@
 #pragma once
 
 class InsertSort{
+
+
+void insertionSort(vector<Comparable>& a, int left, int right)
+{
+    for (int p = left + 1; p <= right; p++) {
+        Comparable tmp = a[p];
+        int j;
+
+       
+    
+}
+
 };
