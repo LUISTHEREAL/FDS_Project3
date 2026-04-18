@@ -1,18 +1,32 @@
- void buildhep(vector<int>&data, int size, int start)
+#pragma once
+
+class Heapsort{
+void buildhep(vector<int>&data, int size, int first)
  {
      int small = first;
-     int leftChild = 2 * first + 1;
-     int rightChild = 2 * first + 2;
+     int left = 2 * first + 1;
+     int right = 2 * first + 2;
 
-     if (leftChild < size && data[leftChild] < data[small])
+     if (left < size && data[left] < data[small])
          small = leftChild;
 
-     if (rightChild < size && data[rightChild] < data[small])
-         small = rightChild;
+     if (right < size && data[right] < data[small])
+         small = right;
 
      if (small != first)
      {
          swap(data[first], data[small]);
          buildhep(data, size, small);
      }
+
  };
+
+ void sortheap(){
+     int maximum = data.size();
+     for(int i = maximum -1; i> 0; i--)
+  {
+   swap(data[i],data[0]);
+   buildhep(data, i, 0);
+ }
+    
+};
