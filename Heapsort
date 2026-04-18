@@ -8,7 +8,7 @@ void buildhep(vector<int>&data, int size, int first)
      int right = 2 * first + 2;
 
      if (left < size && data[left] < data[small])
-         small = leftChild;
+         small = left;
 
      if (right < size && data[right] < data[small])
          small = right;
