@@ -1,7 +1,8 @@
 #pragma once
 
 class Heapsort{
-
+vector<int> data;
+public:
 void buildhep(vector<int>&data, int size, int first)
  {
      int small = first;
