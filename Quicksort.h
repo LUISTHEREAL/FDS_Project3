@@ -3,6 +3,9 @@
 #include "Swap.h"
 #include <cmath>
 
+#include "InsertSort.h"
+#include "Heapsort.h"
+
 const unsigned short MIN_LENGTH = 10, MAX_DEPTH = 10;
 
 
@@ -69,6 +72,10 @@ int Partition_3(vector<int>& arr, int low, int high) {
 void QuickSort(vector<int>& arr, int low, int high, int i = 0) {
 	if (i > MAX_DEPTH) {
 		// switch to heapSort
+		Heapsort hs = Heapsort();
+
+		hs.buildhep(arr, high - low, low);
+		hs.sortheap();
 	}
 	else if (high - low < MIN_LENGTH) {
 		int partitionIndex = Partition_1(arr, low, high);
@@ -79,5 +86,8 @@ void QuickSort(vector<int>& arr, int low, int high, int i = 0) {
 	}
 	else {
 		// switch to insertionSort
+		InsertSort is = InsertSort();
+
+		is.insertionSort(arr, low, high);
 	}
 }
