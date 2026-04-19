@@ -81,8 +81,8 @@ void QuickSort(vector<int>& arr, int low, int high, int i = 0) {
 		int partitionIndex = Partition_1(arr, low, high);
 
 		// call recursively for both smaller and bigger elements
-		QuickSort(arr, low, partitionIndex - 1);
-		QuickSort(arr, partitionIndex + 1, high);
+		QuickSort(arr, low, partitionIndex - 1, i + 1);
+		QuickSort(arr, partitionIndex + 1, high, i + 1);
 	}
 	else {
 		// switch to insertionSort
