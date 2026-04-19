@@ -10,11 +10,6 @@ using namespace std;
 
 int main()
 {
-	/*auto start = chrono::high_resolution_clock::now();
-	auto end = chrono::high_resolution_clock::now();*/
-
-	// auto duration_kdtree = chrono::duration_cast<chrono::microseconds>(end_kdtree - start_kdtree);
-
 	// random vectors of set sizes
 	vector<int>& arr_10 = new vector<int>();
 	vector<int>& arr_100 = new vector<int>();
