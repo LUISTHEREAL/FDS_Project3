@@ -4,12 +4,6 @@
 const unsigned short MIN_LENGTH = 10, MAX_DEPTH = 10;
 
 
-void Swap(int* a, int* b) {
-	int* temp = a;
-	a = b;
-	b = temp;
-}
-
 int Partition(vector<int>& arr, int low, int high) {
 	// choose a pivot
 	int pivot = arr[high];
